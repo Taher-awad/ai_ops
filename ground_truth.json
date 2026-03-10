@@ -1,0 +1,6 @@
+{
+    "anomaly_start_iso": "2026-03-10T04:58:50.681352+00:00",
+    "anomaly_end_iso": "2026-03-10T05:00:50.689737+00:00",
+    "anomaly_type": "error_spike",
+    "expected_behavior": "Simulated an error spike by raising /api/error request percentage to 40%."
+}
