@@ -20,11 +20,7 @@
 /storage/pail
 /vendor
 venv/
-/deliverables/
-logs.json
-ground_truth.json
-report.pdf
-Caddyfile
 Homestead.json
+
 Homestead.yaml
 Thumbs.db
