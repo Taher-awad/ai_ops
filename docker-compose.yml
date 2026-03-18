@@ -2,13 +2,13 @@ version: '3.8'
 
 services:
   app:
-    image: php:8.4-cli
+    image: webdevops/php-nginx:8.4
     volumes:
-      - .:/var/www/html
-    working_dir: /var/www/html
-    command: php artisan serve --host=0.0.0.0 --port=8000
+      - .:/app
+    environment:
+      - WEB_DOCUMENT_ROOT=/app/public
     ports:
-      - "8000:8000"
+      - "8000:80"
 
   prometheus:
     image: prom/prometheus:latest

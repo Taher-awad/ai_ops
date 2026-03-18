@@ -38,7 +38,21 @@ Because the errors are tagged explicitly with the `SYSTEM_ERROR` and `TIMEOUT_ER
 
 ## 4. Visual Evidence & Deliverables
 
-*Note: Please see the accompanying `dashboard.json` and Grafana for live visualization.*
+The observability stack successfully detected and categorized the orchestrated **Anomaly Spike**.
 
-- **Logs Export**: `logs.json` successfully contains >1500 strictly structured request traces showing both success scenarios and various failure modes.
+### 4.1. Dashboard Overview
+![Full Dashboard](grafana_dashboard_full.png)
+*The full dashboard view showing the transition from baseline traffic to the anomaly window (marked by the red region).*
+
+### 4.2. Error Category Breakdown
+![Error Categories](grafana_error_breakdown.png)
+*Categorical breakdown proving that specific layer-7 failures (TIMEOUT_ERROR and SYSTEM_ERROR) are correctly identified and plotted.*
+
+### 4.3. Error Rate % per Endpoint
+![Error Rate](grafana_error_rate.png)
+*Distribution of errors per target endpoint during the 2-minute anomaly spike.*
+
+---
+
+- **Logs Export**: `logs.json` successfully contains >3000 strictly structured request traces (surpassing the 1500 requirement) showing both success scenarios and various failure modes.
 - **Ground Truth**: Accompanied `ground_truth.json` logs the exact ISO-8601 timestamps of the injected 2-minute anomaly spike to train or validate downstream models.
